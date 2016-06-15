@@ -1,0 +1,21 @@
+name: TokensAPI
+main: eu.burrow.tokensapi.main.Main
+version: 1.0
+author: Fehren
+commands:
+  gettokens:
+    usage: /gettokens [Player]
+    description: Get the Tokens of a Player
+    aliases: [tokens]
+  addtokens:
+    usage: /addtokens <Player> <Amount>
+    description: Add Tokens of a Player
+    aliases: [tokensadd]
+  removetokens:
+    usage: /removetokens <Player> <Amount>
+    description: Remove Tokens of a Player
+    aliases: [tokensremove]
+  settokens:
+    usage: /settokens <Player> <Amount>
+    description: Set Tokens of a Player
+    aliases: [tokensset]
