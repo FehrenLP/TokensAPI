@@ -1,6 +1,7 @@
 package eu.burrow.mysql;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -215,8 +216,9 @@ public class Stats {
 		boolean registered = false;
 		
 		Connection c = con;
-		Statement st = c.createStatement();
-		ResultSet rs = st.executeQuery("SELECT Tokens FROM Tokens WHERE Name = '" + Name + "'");
+		PreparedStatement st = c.prepareStatement("SELECT Tokens FROM Tokens WHERE (Name=?)");
+		st.setString(1, Name);
+		ResultSet rs = st.executeQuery();
 		
 		while(rs.next()){
 			registered = true;
