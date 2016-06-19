@@ -27,7 +27,6 @@ public class MySQL {
 			con = DriverManager.getConnection("jdbc:mysql://" + this.host + ":" + this.port + "/" + this.database, this.user, this.password);
 			System.out.println("[TokensAPI] MySQL Connected!");
 		} catch (SQLException e) {
-			e.printStackTrace();
 			System.err.println("[TokensAPI] MySQL Connection Failed!");
 			con = null;
 		}

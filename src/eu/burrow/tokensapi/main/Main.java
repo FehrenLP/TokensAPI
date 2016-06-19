@@ -40,8 +40,11 @@ public class Main extends JavaPlugin {
 		
 		try {
 			Stats.createTables();
-		} catch (SQLException e) {
-			e.printStackTrace();
+		} catch (Exception e) {
+			System.err.println("[TokensAPI] Das Plugin konnte nicht aktiviert werden, da keine MySQL Verbindung aufgebaut werden konnte!");
+			System.err.println("[TokensAPI] Bitte stelle die MySQL-Daten in der config ein!");
+			Bukkit.getPluginManager().disablePlugin(this);
+			return;
 		}
 		
 		loadListener();
@@ -70,7 +73,7 @@ public class Main extends JavaPlugin {
 		this.getConfig().addDefault("MySQL.Password", "password");
 		this.getConfig().addDefault("MySQL.User", "User");
 		this.getConfig().addDefault("MySQL.Database", "Database");
-		this.getConfig().addDefault("MySQL.Port", "3306");
+		this.getConfig().addDefault("MySQL.Port", 3306);
 		this.getConfig().addDefault("Options.Prefix", "&7[&e&l!&7] ");
 		this.getConfig().addDefault("Options.Scoreboard", false);
 		

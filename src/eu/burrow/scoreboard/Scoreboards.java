@@ -43,15 +43,15 @@ public class Scoreboards {
 			t = ChatColor.GOLD + "/tokens";
 		}
 		
-		Score l1 = stats.getScore(ChatColor.GOLD + "");
+		Score l1 = stats.getScore(ChatColor.GOLD + " ");
 		Score ueTokens = stats.getScore(ChatColor.BLUE + "Your Tokens:");
 		Score Tokens = stats.getScore(t);
-		Score l2 = stats.getScore(ChatColor.BLUE + "");
+		Score l2 = stats.getScore(ChatColor.BLUE + " ");
 		
-		l1.setScore(3);
-		ueTokens.setScore(2);
-		Tokens.setScore(1);
-		l2.setScore(0);
+		l1.setScore(4);
+		ueTokens.setScore(3);
+		Tokens.setScore(2);
+		l2.setScore(1);
 
 		p.setScoreboard(s);
 	}
@@ -87,15 +87,15 @@ public class Scoreboards {
 					t = ChatColor.GOLD + "/tokens";
 				}
 				
-				Score l1 = stats.getScore(ChatColor.GOLD + "");
+				Score l1 = stats.getScore(ChatColor.GOLD + " ");
 				Score ueTokens = stats.getScore(ChatColor.BLUE + "Your Tokens:");
 				Score Tokens = stats.getScore(t);
-				Score l2 = stats.getScore(ChatColor.BLUE + "");
+				Score l2 = stats.getScore(ChatColor.BLUE + " ");
 				
-				l1.setScore(3);
-				ueTokens.setScore(2);
-				Tokens.setScore(1);
-				l2.setScore(0);
+				l1.setScore(4);
+				ueTokens.setScore(3);
+				Tokens.setScore(2);
+				l2.setScore(1);
 
 				p.setScoreboard(s);
 				
